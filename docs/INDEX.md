@@ -14,6 +14,7 @@
 - `docs/RESTORE_PLAYBOOK.md`
 - `docs/RESTORE_TEST.md`
 - `docs/OPS_LOG.md`
+- `docs/KEY_COMMANDS.md`
 
 ## Security & Compliance
 
@@ -53,3 +54,5 @@
 - `docs/FAQ_INSTALL.md`
 - `docs/USER_GUIDE.md`
 - `docs/DECOMMISSION.md`
+- `docs/INTEGRATIONS.md`
+- `docs/DATA_MIGRATION.md`
