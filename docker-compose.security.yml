@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  trivy:
+    image: aquasec/trivy:latest
+    container_name: firefly_trivy_scanner
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./reports:/reports
+    command: ["image", "--format", "template", "--template", "@/contrib/gitlab.tpl", "-o", "/reports/security-report.html", "fireflyiii/core:latest"]
+    networks:
+      - fin_net
+
+  # Vulnerability scanner for the application
+  app-scanner:
+    image: aquasec/trivy:latest
+    container_name: firefly_app_scanner
+    volumes:
+      - ./:/src
+      - ./reports:/reports
+    working_dir: /src
+    command: ["fs", "--format", "json", "--output", "/reports/app-scan-results.json", "/src"]
+    networks:
+      - fin_net
+
+networks:
+  fin_net:
+    external: true

@@ -49,6 +49,60 @@ Two build scripts are provided:
 - Docker build context and file are explicitly defined in `docker-compose.yml`
 - Resource limits can be adjusted in the compose files
 
+## Monitoring and Observability
+
+The system includes a comprehensive monitoring stack:
+
+- **Prometheus**: For metrics collection and alerting
+- **Grafana**: For visualization and dashboards
+- **Node Exporter**: For system-level metrics
+
+To start the monitoring stack:
+```bash
+make monitoring-up
+# Or directly:
+docker compose -f docker-compose.monitoring.yml up -d
+```
+
+Access Grafana at `http://localhost:3000` (default login: admin/admin123 - change this in production!)
+
+## Centralized Logging
+
+The system includes an ELK stack for centralized logging:
+
+- **Elasticsearch**: For log storage and indexing
+- **Logstash**: For log processing and transformation
+- **Kibana**: For log visualization and analysis
+
+To start the logging stack:
+```bash
+make logging-up
+# Or directly:
+docker compose -f docker-compose.logging.yml up -d
+```
+
+Access Kibana at `http://localhost:5601`
+
+## Security Features
+
+- **Security Headers**: Configured in `security/headers.conf`
+- **Vulnerability Scanning**: Using Trivy for container and application scanning
+- **Resource Limits**: Preventing resource exhaustion attacks
+
+To run a security scan:
+```bash
+make security-scan
+```
+
+## Full Stack Deployment
+
+To run the complete stack with monitoring and logging:
+```bash
+make full-up
+```
+
+This starts the application, monitoring, and logging stacks together.
+
 ## User Journey
 
 1. Log in and confirm accounts.
