@@ -208,3 +208,11 @@ See `docs/RESTORE_TEST.md` for backup restore validation.
 ## Deployment Guide
 
 See `docs/DEPLOYMENT.md` for production deployment steps.
+
+## Upgrade Guide
+
+See `docs/UPGRADES.md` for safe upgrade steps.
+
+## Backup Policy
+
+See `docs/BACKUP_POLICY.md` for retention and encryption guidance.
