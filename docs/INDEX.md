@@ -30,6 +30,9 @@
 - `docs/COMPLIANCE.md`
 - `docs/DATA_CLASSIFICATION.md`
 - `docs/SECRETS_HANDLING.md`
+- `docs/ACCESS_RECOVERY.md`
+- `docs/BACKUP_ENCRYPTION.md`
+- `docs/THREAT_RESPONSE.md`
 
 ## Architecture & Config
 
