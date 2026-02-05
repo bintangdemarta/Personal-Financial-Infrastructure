@@ -25,6 +25,8 @@
 - `docs/BACKUP_POLICY.md`
 - `docs/DATA_GOVERNANCE.md`
 - `docs/DATA_RETENTION.md`
+- `docs/INFRA_HARDENING.md`
+- `docs/INCIDENT_RESPONSE.md`
 
 ## Architecture & Config
 
@@ -62,3 +64,4 @@
 - `docs/DECOMMISSION.md`
 - `docs/INTEGRATIONS.md`
 - `docs/DATA_MIGRATION.md`
+- `docs/RELEASE_PROCESS.md`
