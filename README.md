@@ -276,3 +276,11 @@ See `CONTRIBUTING.md` for contribution guidelines.
 ## Code of Conduct
 
 See `CODE_OF_CONDUCT.md` for behavior expectations.
+
+## Troubleshooting Guide
+
+See `docs/TROUBLESHOOTING.md` for diagnostics and fixes.
+
+## Ops FAQ
+
+See `docs/FAQ_OPS.md` for operations-specific questions.
