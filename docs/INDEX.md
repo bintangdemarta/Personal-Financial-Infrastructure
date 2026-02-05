@@ -65,3 +65,6 @@
 - `docs/INTEGRATIONS.md`
 - `docs/DATA_MIGRATION.md`
 - `docs/RELEASE_PROCESS.md`
+- `docs/TESTING_VALIDATION.md`
+- `docs/PERFORMANCE.md`
+- `docs/CAPACITY.md`
