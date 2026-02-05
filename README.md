@@ -176,3 +176,7 @@ If logs are growing, rotate them on the host:
 ## Operations Reference
 
 See `docs/OPERATIONS.md` for daily, weekly, and monthly ops checklists.
+
+## Change Log
+
+See `docs/CHANGELOG.md`.
