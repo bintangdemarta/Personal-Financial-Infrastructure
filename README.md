@@ -296,3 +296,7 @@ See `docs/NETWORKING.md` for ports and DNS.
 ## Database Maintenance
 
 See `docs/DB_MAINTENANCE.md` for DB checks.
+
+## Docs Index
+
+See `docs/INDEX.md` for a consolidated list.
