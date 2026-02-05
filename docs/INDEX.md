@@ -45,4 +45,5 @@
 - `docs/FAQ.md`
 - `docs/FAQ_OPS.md`
 - `docs/FAQ_INSTALL.md`
+- `docs/USER_GUIDE.md`
 - `docs/DECOMMISSION.md`

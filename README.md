@@ -13,6 +13,12 @@ docker exec -it firefly_core chown -R www-data:www-data /var/www/html/storage/up
 # http://IP:8080
 ```
 
+## User Journey
+
+1. Log in and confirm accounts.
+2. Add transactions and set rules.
+3. Review balances weekly.
+
 ## First-Run Steps (from PRD)
 
 1. Infrastructure: Install Docker & Compose on the host.
