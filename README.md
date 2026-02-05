@@ -180,3 +180,7 @@ See `docs/OPERATIONS.md` for daily, weekly, and monthly ops checklists.
 ## Change Log
 
 See `docs/CHANGELOG.md`.
+
+## Default Branch
+
+The default branch for this repository is `master`.
