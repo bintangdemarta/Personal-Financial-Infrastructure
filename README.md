@@ -236,3 +236,11 @@ See `docs/STYLE_GUIDE.md` for documentation conventions.
 ## Decisions Log
 
 See `docs/DECISIONS.md` for architecture decisions.
+
+## Onboarding
+
+See `docs/ONBOARDING.md` for new admin setup.
+
+## Incident Template
+
+See `docs/INCIDENT_TEMPLATE.md` for incident writeups.
