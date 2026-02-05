@@ -125,8 +125,8 @@ Note: In this setup, remove the host port mapping for `app` in `docker-compose.y
 
 ## Script Execution Notes
 
-- On Linux, mark scripts executable once: `chmod +x scripts/backup_db.sh scripts/restore_db.sh`.
-- On Windows, run via Git Bash/WSL using `bash scripts/backup_db.sh` or `bash scripts/restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`.
+- On Linux, mark scripts executable once: `chmod +x scripts/backup_db.sh scripts/restore_db.sh scripts/healthcheck.sh`.
+- On Windows, run via Git Bash/WSL using `bash scripts/backup_db.sh`, `bash scripts/restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`, or `bash scripts/healthcheck.sh`.
 
 ## Production Compose
 
@@ -134,4 +134,12 @@ Use `docker-compose.prod.yml` to run behind Traefik and remove host port exposur
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
+
+## Traefik Compose
+
+Use `docker-compose.traefik.yml` to run Traefik on the same network.
+
+```bash
+docker compose -f docker-compose.traefik.yml up -d
 ```

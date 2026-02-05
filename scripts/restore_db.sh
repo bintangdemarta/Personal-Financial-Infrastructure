@@ -1,5 +1,5 @@
 #!/bin/bash
-# Description: Restore MariaDB from a backup file
+# Description: Restore MariaDB from a backup file (with safety prompt)
 
 set -euo pipefail
 
@@ -18,6 +18,12 @@ if [ ! -f "$BACKUP_FILE" ]; then
   echo "Backup file not found: $BACKUP_FILE"
   exit 1
 fi
+
+read -r -p "This will overwrite the database '$DB_NAME'. Continue? [y/N] " ans
+case "$ans" in
+  y|Y) ;;
+  *) echo "Aborted."; exit 1 ;;
+esac
 
 echo "[INFO] Restoring from $BACKUP_FILE"
 
