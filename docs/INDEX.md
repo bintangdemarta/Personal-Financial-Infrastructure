@@ -77,3 +77,5 @@
 - `docs/CAPACITY.md`
 - `docs/SLO.md`
 - `docs/RISK_REGISTER.md`
+- `docs/RELEASE_CHECKLIST.md`
+- `docs/ROLLBACK.md`
