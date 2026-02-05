@@ -127,3 +127,11 @@ Note: In this setup, remove the host port mapping for `app` in `docker-compose.y
 
 - On Linux, mark scripts executable once: `chmod +x scripts/backup_db.sh scripts/restore_db.sh`.
 - On Windows, run via Git Bash/WSL using `bash scripts/backup_db.sh` or `bash scripts/restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`.
+
+## Production Compose
+
+Use `docker-compose.prod.yml` to run behind Traefik and remove host port exposure.
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```

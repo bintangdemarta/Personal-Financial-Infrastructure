@@ -21,3 +21,6 @@ restore:
 health:
 	docker compose ps --format "table {{.Name}}\t{{.State}}"
 	@powershell -Command "$$s=''; while ($$true) { $$s=(docker compose ps --format '{{.Name}} {{.State}}') -join ""; if ($$s -match 'firefly_db.*healthy') { break } Start-Sleep -Seconds 2 }"
+
+prod-up:
+	docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d

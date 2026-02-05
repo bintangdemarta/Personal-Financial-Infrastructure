@@ -4,6 +4,9 @@
 # Backups
 backups/
 
+# Secrets
+secrets/
+
 # OS
 .DS_Store
 Thumbs.db
