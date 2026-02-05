@@ -268,3 +268,11 @@ See `docs/GLOSSARY.md` for common terms.
 ## FAQ
 
 See `docs/FAQ.md` for common questions.
+
+## Contributing
+
+See `CONTRIBUTING.md` for contribution guidelines.
+
+## Code of Conduct
+
+See `CODE_OF_CONDUCT.md` for behavior expectations.
