@@ -8,7 +8,7 @@
 4. Permission Fix: Execute the chown command from Section 5.1.
 5. Verification: Access web UI (http://IP:8080), create the first Admin User.
 6. Initialization: Set up the "Asset Accounts" (Section 4.1).
-7. Backup Test: Run bash backup_db.sh manually to confirm it works.
+7. Backup Test: Run bash scripts/backup_db.sh manually to confirm it works.
 
 ## Permission Fix Command (Section 5.1)
 
@@ -47,7 +47,7 @@ Liabilities:
 Backup:
 
 ```bash
-bash backup_db.sh
+bash scripts/backup_db.sh
 ```
 
 Restore (example):
@@ -125,5 +125,5 @@ Note: In this setup, remove the host port mapping for `app` in `docker-compose.y
 
 ## Script Execution Notes
 
-- On Linux, mark scripts executable once: `chmod +x backup_db.sh restore_db.sh`.
-- On Windows, run via Git Bash/WSL using `bash backup_db.sh` or `bash restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`.
+- On Linux, mark scripts executable once: `chmod +x scripts/backup_db.sh scripts/restore_db.sh`.
+- On Windows, run via Git Bash/WSL using `bash scripts/backup_db.sh` or `bash scripts/restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`.
