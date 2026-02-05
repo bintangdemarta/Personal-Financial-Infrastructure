@@ -22,6 +22,7 @@
 - `docs/AUDIT.md`
 - `docs/REVIEW_SCHEDULE.md`
 - `docs/BACKUP_POLICY.md`
+- `docs/DATA_GOVERNANCE.md`
 
 ## Architecture & Config
 
@@ -29,6 +30,11 @@
 - `docs/CONFIG.md`
 - `docs/NETWORKING.md`
 - `docs/DB_MAINTENANCE.md`
+
+## Automation & Reporting
+
+- `docs/AUTOMATION.md`
+- `docs/REPORTING.md`
 
 ## Templates
 
