@@ -44,4 +44,5 @@
 - `docs/GLOSSARY.md`
 - `docs/FAQ.md`
 - `docs/FAQ_OPS.md`
+- `docs/FAQ_INSTALL.md`
 - `docs/DECOMMISSION.md`
