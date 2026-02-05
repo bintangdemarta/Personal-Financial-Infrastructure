@@ -46,12 +46,7 @@ gzip -dc backups/db_YYYYMMDD_HHMM.sql.gz | docker exec -i firefly_db /usr/bin/my
 
 ## Docs Index
 
-See `docs/INDEX.md` for the full documentation catalog, including:
-
-- Architecture, configuration, and deployment
-- Operations, maintenance, and troubleshooting
-- Security, access control, and audits
-- Templates and checklists
+See `docs/INDEX.md` for the full documentation catalog.
 
 ## Default Branch
 

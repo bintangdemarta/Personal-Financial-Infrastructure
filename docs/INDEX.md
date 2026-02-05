@@ -1,35 +1,34 @@
 # Documentation Index
 
-## Core
+## Quick Start (New Setup)
 
 - `README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/CONFIG.md`
 - `docs/DEPLOYMENT.md`
-- `docs/UPGRADES.md`
+- `docs/BOOTSTRAP_CHECKLIST.md`
+- `docs/RUNBOOK_SHORT.md`
 
 ## Operations
 
 - `docs/OPERATIONS.md`
-- `docs/RUNBOOK_SHORT.md`
+- `docs/MAINTENANCE.md`
 - `docs/RESTORE_PLAYBOOK.md`
 - `docs/RESTORE_TEST.md`
-- `docs/BOOTSTRAP_CHECKLIST.md`
-- `docs/DECOMMISSION.md`
 - `docs/OPS_LOG.md`
 
-## Security
+## Security & Compliance
 
 - `docs/ACCESS_CONTROL.md`
 - `docs/THREAT_MODEL.md`
-- `docs/BACKUP_POLICY.md`
 - `docs/AUDIT.md`
+- `docs/REVIEW_SCHEDULE.md`
+- `docs/BACKUP_POLICY.md`
 
-## Maintenance
+## Architecture & Config
 
-- `docs/MAINTENANCE.md`
-- `docs/DB_MAINTENANCE.md`
+- `docs/ARCHITECTURE.md`
+- `docs/CONFIG.md`
 - `docs/NETWORKING.md`
+- `docs/DB_MAINTENANCE.md`
 
 ## Templates
 
@@ -42,6 +41,7 @@
 - `docs/STYLE_GUIDE.md`
 - `docs/DECISIONS.md`
 - `docs/ONBOARDING.md`
+- `docs/GLOSSARY.md`
 - `docs/FAQ.md`
 - `docs/FAQ_OPS.md`
-- `docs/GLOSSARY.md`
+- `docs/DECOMMISSION.md`
