@@ -1,10 +1,14 @@
 # FIN-CORE-01 Runbook
 
+## Important Note on Architecture Change
+
+This repository has been modified to build the Firefly III application from source code rather than using the pre-built Docker image. See `MIGRATION_NOTE.md` for important information about this change and recommendations.
+
 ## Quick Start
 
 ```bash
-# 1) Start services
-docker compose up -d
+# 1) Start services (this will now build from source)
+docker compose up -d --build
 
 # 2) Fix upload permissions
 docker exec -it firefly_core chown -R www-data:www-data /var/www/html/storage/upload
