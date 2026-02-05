@@ -188,3 +188,15 @@ The default branch for this repository is `master`.
 ## Architecture Reference
 
 See `docs/ARCHITECTURE.md` for the system diagram and component notes.
+
+## Configuration Reference
+
+See `docs/CONFIG.md` for `.env` documentation.
+
+## Quick Runbook
+
+See `docs/RUNBOOK_SHORT.md` for a minimal operations guide.
+
+## Threat Model
+
+See `docs/THREAT_MODEL.md` for lightweight threat analysis and mitigations.
