@@ -228,3 +228,11 @@ See `docs/RESTORE_PLAYBOOK.md` for incident recovery steps.
 ## Ops Log
 
 See `docs/OPS_LOG.md` for operational record keeping.
+
+## Style Guide
+
+See `docs/STYLE_GUIDE.md` for documentation conventions.
+
+## Decisions Log
+
+See `docs/DECISIONS.md` for architecture decisions.
