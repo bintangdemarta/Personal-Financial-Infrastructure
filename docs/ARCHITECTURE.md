@@ -23,10 +23,9 @@ graph TD
     end
 ```
 
-## Components
+## Data Flow (Narrative)
 
-- **Firefly III Core**: Stateless Laravel app providing the UI/API.
-- **MariaDB 11**: ACID-compliant database using InnoDB.
-- **Cron Sidecar**: Triggers Firefly III cron endpoint for scheduled jobs.
-- **Traefik**: Optional reverse proxy for HTTPS and routing.
-- **Volumes**: Persistent storage for DB and uploads.
+1. User accesses Firefly III through Traefik over HTTPS.
+2. Firefly III reads and writes transaction data in MariaDB.
+3. Cron sidecar triggers scheduled tasks via the Firefly III API.
+4. Backups are taken via `mysqldump` and stored locally, then copied offsite.

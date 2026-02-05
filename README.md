@@ -1,5 +1,18 @@
 # FIN-CORE-01 Runbook
 
+## Quick Start
+
+```bash
+# 1) Start services
+docker compose up -d
+
+# 2) Fix upload permissions
+docker exec -it firefly_core chown -R www-data:www-data /var/www/html/storage/upload
+
+# 3) Open UI
+# http://IP:8080
+```
+
 ## First-Run Steps (from PRD)
 
 1. Infrastructure: Install Docker & Compose on the host.
