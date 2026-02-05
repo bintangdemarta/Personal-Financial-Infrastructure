@@ -220,3 +220,11 @@ See `docs/BACKUP_POLICY.md` for retention and encryption guidance.
 ## Access Control
 
 See `docs/ACCESS_CONTROL.md` for access policy and reviews.
+
+## Restore Playbook
+
+See `docs/RESTORE_PLAYBOOK.md` for incident recovery steps.
+
+## Ops Log
+
+See `docs/OPS_LOG.md` for operational record keeping.
