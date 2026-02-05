@@ -252,3 +252,11 @@ See `docs/AUDIT.md` for review steps.
 ## Review Schedule
 
 See `docs/REVIEW_SCHEDULE.md` for recurring reviews.
+
+## Bootstrap Checklist
+
+See `docs/BOOTSTRAP_CHECKLIST.md` for startup validation.
+
+## Decommission
+
+See `docs/DECOMMISSION.md` for end-of-life procedures.
