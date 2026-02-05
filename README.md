@@ -260,3 +260,11 @@ See `docs/BOOTSTRAP_CHECKLIST.md` for startup validation.
 ## Decommission
 
 See `docs/DECOMMISSION.md` for end-of-life procedures.
+
+## Glossary
+
+See `docs/GLOSSARY.md` for common terms.
+
+## FAQ
+
+See `docs/FAQ.md` for common questions.
