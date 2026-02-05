@@ -27,6 +27,9 @@
 - `docs/DATA_RETENTION.md`
 - `docs/INFRA_HARDENING.md`
 - `docs/INCIDENT_RESPONSE.md`
+- `docs/COMPLIANCE.md`
+- `docs/DATA_CLASSIFICATION.md`
+- `docs/SECRETS_HANDLING.md`
 
 ## Architecture & Config
 
