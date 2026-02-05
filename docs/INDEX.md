@@ -34,6 +34,7 @@
 - `docs/CONFIG.md`
 - `docs/NETWORKING.md`
 - `docs/DB_MAINTENANCE.md`
+- `docs/DEPENDENCIES.md`
 
 ## Automation & Reporting
 
@@ -68,3 +69,5 @@
 - `docs/TESTING_VALIDATION.md`
 - `docs/PERFORMANCE.md`
 - `docs/CAPACITY.md`
+- `docs/SLO.md`
+- `docs/RISK_REGISTER.md`
