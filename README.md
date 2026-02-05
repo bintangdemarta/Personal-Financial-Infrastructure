@@ -184,3 +184,7 @@ See `docs/CHANGELOG.md`.
 ## Default Branch
 
 The default branch for this repository is `master`.
+
+## Architecture Reference
+
+See `docs/ARCHITECTURE.md` for the system diagram and component notes.
