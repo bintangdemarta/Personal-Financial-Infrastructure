@@ -172,3 +172,7 @@ If logs are growing, rotate them on the host:
 
 - For Docker logs: configure `/etc/docker/daemon.json` with log rotation options.
 - For cron logs (example): use `logrotate` for `/var/log/fin_backup.log`.
+
+## Operations Reference
+
+See `docs/OPERATIONS.md` for daily, weekly, and monthly ops checklists.
