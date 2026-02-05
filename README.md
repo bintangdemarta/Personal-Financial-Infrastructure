@@ -244,3 +244,11 @@ See `docs/ONBOARDING.md` for new admin setup.
 ## Incident Template
 
 See `docs/INCIDENT_TEMPLATE.md` for incident writeups.
+
+## Audit Checklist
+
+See `docs/AUDIT.md` for review steps.
+
+## Review Schedule
+
+See `docs/REVIEW_SCHEDULE.md` for recurring reviews.
