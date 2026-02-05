@@ -284,3 +284,15 @@ See `docs/TROUBLESHOOTING.md` for diagnostics and fixes.
 ## Ops FAQ
 
 See `docs/FAQ_OPS.md` for operations-specific questions.
+
+## Maintenance Guide
+
+See `docs/MAINTENANCE.md` for periodic tasks.
+
+## Networking Guide
+
+See `docs/NETWORKING.md` for ports and DNS.
+
+## Database Maintenance
+
+See `docs/DB_MAINTENANCE.md` for DB checks.
