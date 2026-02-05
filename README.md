@@ -200,3 +200,7 @@ See `docs/RUNBOOK_SHORT.md` for a minimal operations guide.
 ## Threat Model
 
 See `docs/THREAT_MODEL.md` for lightweight threat analysis and mitigations.
+
+## Restore Test
+
+See `docs/RESTORE_TEST.md` for backup restore validation.
