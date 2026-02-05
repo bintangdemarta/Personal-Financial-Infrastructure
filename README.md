@@ -159,3 +159,16 @@ docker compose -f docker-compose.traefik.yml up -d
 - Restore the database using the latest backup: `bash scripts/restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`.
 - Start services: `docker compose up -d`.
 - Validate: `docker compose ps`, then log in to confirm data integrity.
+
+## Monitoring & Alerts
+
+- Watch container health: `bash scripts/healthcheck.sh`.
+- Check logs: `docker compose logs -f` (app and db) and `docker compose logs cron` (cron).
+- Consider alerts via your host (Prometheus/Grafana, Healthchecks, or simple cron mail alerts).
+
+## Log Rotation (Host)
+
+If logs are growing, rotate them on the host:
+
+- For Docker logs: configure `/etc/docker/daemon.json` with log rotation options.
+- For cron logs (example): use `logrotate` for `/var/log/fin_backup.log`.
