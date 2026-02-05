@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # --- Service: Core Application ---
+  app:
+    image: fireflyiii/core:latest
+    container_name: firefly_core
+    restart: unless-stopped
+    volumes:
+      - firefly_upload:/var/www/html/storage/upload
+    env_file: .env
+    ports:
+      - "${APP_PORT:-8080}:8080" # Exposed to Host for Reverse Proxy
+    networks:
+      - fin_net
+    depends_on:
+      db:
+        condition: service_healthy
+    # Fix for Currency Formatting (IDR requires proper locale)
+    environment:
+      - DKR_BUILD_LOCALE=id_ID.UTF-8
+
+  # --- Service: Database ---
+  db:
+    image: mariadb:11
+    container_name: firefly_db
+    restart: unless-stopped
+    # Critical flags for data integrity and encoding
+    command:
+      - --transaction-isolation=READ-COMMITTED
+      - --binlog-format=ROW
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+    volumes:
+      - firefly_db_data:/var/lib/mysql
+    networks:
+      - fin_net # Isolated: No ports exposed to host
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- Service: Automation Sidecar ---
+  cron:
+    image: alpine:latest
+    container_name: firefly_cron
+    restart: unless-stopped
+    # Robust Cron Command: waits for app to be ready, then triggers daily at 3 AM
+    command: >
+      sh -c "echo '0 3 * * * wget -qO- http://app:8080/api/v1/cron/${STATIC_CRON_TOKEN}' | crontab - && crond -f -L /dev/stdout"
+    networks:
+      - fin_net
+    depends_on:
+      - app
+
+volumes:
+  firefly_upload:
+  firefly_db_data:
+
+networks:
+  fin_net:
+    driver: bridge
