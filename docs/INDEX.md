@@ -24,6 +24,7 @@
 - `docs/REVIEW_SCHEDULE.md`
 - `docs/BACKUP_POLICY.md`
 - `docs/DATA_GOVERNANCE.md`
+- `docs/DATA_RETENTION.md`
 
 ## Architecture & Config
 
@@ -37,6 +38,10 @@
 - `docs/AUTOMATION.md`
 - `docs/REPORTING.md`
 
+## Monitoring
+
+- `docs/MONITORING.md`
+
 ## Templates
 
 - `docs/RELEASE_NOTES_TEMPLATE.md`
@@ -49,6 +54,7 @@
 - `docs/DECISIONS.md`
 - `docs/ONBOARDING.md`
 - `docs/GLOSSARY.md`
+- `docs/GLOSSARY_EXPANDED.md`
 - `docs/FAQ.md`
 - `docs/FAQ_OPS.md`
 - `docs/FAQ_INSTALL.md`
