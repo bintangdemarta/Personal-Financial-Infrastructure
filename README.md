@@ -216,3 +216,7 @@ See `docs/UPGRADES.md` for safe upgrade steps.
 ## Backup Policy
 
 See `docs/BACKUP_POLICY.md` for retention and encryption guidance.
+
+## Access Control
+
+See `docs/ACCESS_CONTROL.md` for access policy and reviews.
