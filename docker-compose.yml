@@ -3,7 +3,9 @@ version: '3.8'
 services:
   # --- Service: Core Application ---
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: firefly_core
     restart: unless-stopped
     volumes:
@@ -19,6 +21,15 @@ services:
     # Fix for Currency Formatting (IDR requires proper locale)
     environment:
       - DKR_BUILD_LOCALE=id_ID.UTF-8
+    # Resource limits for development
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+          cpus: '0.5'
 
   # --- Service: Database ---
   db:
@@ -38,6 +49,7 @@ services:
       - MYSQL_DATABASE=${DB_DATABASE}
     volumes:
       - firefly_db_data:/var/lib/mysql
+      - ./mariadb.conf:/etc/mysql/conf.d/custom.cnf:ro  # Custom config
     networks:
       - fin_net # Isolated: No ports exposed to host
     healthcheck:
@@ -45,6 +57,15 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    # Resource limits for development
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.75'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
 
   # --- Service: Automation Sidecar ---
   cron:
@@ -58,10 +79,27 @@ services:
       - fin_net
     depends_on:
       - app
+    # Resource limits for development
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.1'
+        reservations:
+          memory: 32M
+          cpus: '0.05'
 
 volumes:
   firefly_upload:
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/storage/upload
   firefly_db_data:
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/storage/db
 
 networks:
   fin_net:

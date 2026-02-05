@@ -1,0 +1,46 @@
+# Ignore all git-related files/folders
+.git
+.gitignore
+
+# Ignore IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore node modules (will be installed during build)
+node_modules/
+
+# Ignore Composer cache (will be installed during build)
+vendor/
+
+# Ignore environment-specific files that shouldn't be in the image
+.env.local
+.env.dev
+.env.testing
+
+# Ignore backup files
+*~
+*.bak
+*.tmp
+
+# Ignore documentation that's not needed in the container
+docs/
+*.md
+
+# Ignore backups
+backups/
+*.sql
+*.gz
+*.zip
+
+# Ignore any local config files
+config/local.php

@@ -4,11 +4,26 @@
 
 This repository has been modified to build the Firefly III application from source code rather than using the pre-built Docker image. See `MIGRATION_NOTE.md` for important information about this change and recommendations.
 
+## Enhanced Docker Build Process
+
+The Docker build process has been significantly improved with:
+
+- **Multi-stage builds** for smaller, more secure images
+- **Resource limits** to prevent container resource exhaustion
+- **Custom MariaDB configuration** for better performance
+- **Health checks** to monitor service status
+- **Build scripts** for easier deployment
+- **Improved volume management** for persistent data
+
 ## Quick Start
 
 ```bash
-# 1) Start services (this will now build from source)
+# 1) Build and start services (this will build from source)
 docker compose up -d --build
+
+# Alternative: Use the build script
+bash scripts/build.sh
+docker compose up -d
 
 # 2) Fix upload permissions
 docker exec -it firefly_core chown -R www-data:www-data /var/www/html/storage/upload
@@ -16,6 +31,23 @@ docker exec -it firefly_core chown -R www-data:www-data /var/www/html/storage/up
 # 3) Open UI
 # http://IP:APP_PORT
 ```
+
+## Development vs Production
+
+- For development: Use `docker-compose.yml` (current configuration)
+- For production: Use `docker-compose.prod.yml` with resource optimizations
+
+## Build Scripts
+
+Two build scripts are provided:
+- `scripts/build.sh` - For Unix/Linux/macOS systems
+- `scripts/build.bat` - For Windows systems
+
+## Advanced Configuration
+
+- Custom MariaDB configuration is available in `mariadb.conf`
+- Docker build context and file are explicitly defined in `docker-compose.yml`
+- Resource limits can be adjusted in the compose files
 
 ## User Journey
 

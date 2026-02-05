@@ -3,6 +3,9 @@
 up:
 	docker compose up -d
 
+up-build:
+	docker compose up -d --build
+
 down:
 	docker compose down
 
@@ -11,6 +14,12 @@ logs:
 
 ps:
 	docker compose ps
+
+build:
+	bash scripts/build.sh
+
+build-force:
+	docker compose build --no-cache
 
 backup:
 	bash scripts/backup_db.sh
@@ -26,3 +35,7 @@ prod-up:
 
 traefik-up:
 	docker compose -f docker-compose.traefik.yml up -d
+
+clean:
+	docker compose down -v
+	docker system prune -f
