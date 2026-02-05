@@ -11,7 +11,7 @@ fi
 BACKUP_FILE="$1"
 CONTAINER="firefly_db"
 DB_USER="fin_admin"
-DB_PASS="9xL#m2$vP8qZ!wR5" # Matches .env
+DB_PASS='9xL#m2$vP8qZ!wR5' # Matches .env
 DB_NAME="firefly"
 
 if [ ! -f "$BACKUP_FILE" ]; then

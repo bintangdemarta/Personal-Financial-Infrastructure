@@ -4,7 +4,7 @@ BACKUP_DIR="./backups"
 TIMESTAMP=$(date +"%Y%m%d_%H%M")
 CONTAINER="firefly_db"
 DB_USER="fin_admin"
-DB_PASS="9xL#m2$vP8qZ!wR5" # Matches .env
+DB_PASS='9xL#m2$vP8qZ!wR5' # Matches .env
 
 mkdir -p $BACKUP_DIR
 

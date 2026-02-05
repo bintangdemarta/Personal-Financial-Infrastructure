@@ -10,7 +10,7 @@ docker compose up -d
 docker exec -it firefly_core chown -R www-data:www-data /var/www/html/storage/upload
 
 # 3) Open UI
-# http://IP:8080
+# http://IP:APP_PORT
 ```
 
 ## User Journey
