@@ -61,6 +61,14 @@ gzip -dc backups/db_YYYYMMDD_HHMM.sql.gz | docker exec -i firefly_db /usr/bin/my
 - The backup script keeps 30 days locally.
 - For 3-2-1 compliance, copy backups to a second device and an offsite location.
 
+## Backup Cron Example (Host)
+
+Run daily at 02:00 server time (Linux):
+
+```bash
+0 2 * * * /bin/bash /path/to/Managing\ Money\ System/scripts/backup_db.sh >> /var/log/fin_backup.log 2>&1
+```
+
 ## Troubleshooting
 
 - `firefly_db` not healthy: Wait 30-60 seconds, then re-check with `docker compose ps`. If still unhealthy, check logs: `docker compose logs db`.
@@ -143,3 +151,11 @@ Use `docker-compose.traefik.yml` to run Traefik on the same network.
 ```bash
 docker compose -f docker-compose.traefik.yml up -d
 ```
+
+## Disaster Recovery Checklist
+
+- Confirm you have a recent backup in `backups/` and an offsite copy.
+- Stop services: `docker compose down`.
+- Restore the database using the latest backup: `bash scripts/restore_db.sh backups/db_YYYYMMDD_HHMM.sql.gz`.
+- Start services: `docker compose up -d`.
+- Validate: `docker compose ps`, then log in to confirm data integrity.
