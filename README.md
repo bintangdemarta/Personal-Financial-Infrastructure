@@ -204,3 +204,7 @@ See `docs/THREAT_MODEL.md` for lightweight threat analysis and mitigations.
 ## Restore Test
 
 See `docs/RESTORE_TEST.md` for backup restore validation.
+
+## Deployment Guide
+
+See `docs/DEPLOYMENT.md` for production deployment steps.
